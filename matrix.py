@@ -1,13 +1,5 @@
-def print_concerntous_matrix(matrix, size):
-    a = [[3,3,3,3,3],[3,2,2,2,3], [3,2,1,2,3], [3,2,2,2,3], [3,3,3,3,3]]
-    for i in range(size):
-        b = ""
-        for j in range(size):
-            b = b + " " + str(matrix[i][j])
-        print(b)    
-
+#!/usr/bin/env python
 def add_border(matrix, n):
-  print("Enter border")
   size = n*2-1
   target = []
   for r in range(size):
@@ -21,17 +13,17 @@ def add_border(matrix, n):
             row = [matrix[r-1]]
           else:
             row = matrix[r-1]
-        print("C =" + str(c))
-        print("Enter Before")
-        print(row)
+#        print("C =" + str(c))
+#        print("Enter Before")
+#        print(row)
         row.insert(c,n)
-        print("Enter After")
-        print(row)
-    print("Row")
-    print(row)
+#        print("Enter After")
+#        print(row)
+#    print("Row")
+#    print(row)
     target.append(row)
-  print("End Border")
-  print(target)
+#  print("End Border")
+#  print(target)
   return target
 
 def create_target(n):
@@ -44,6 +36,7 @@ def create_target(n):
     for i in range(2,n+1):
       matrix = add_border(matrix,i)  
 
-output = create_target(2)
-print(output)
+if __name__ == '__main__':
+  output = create_target(3)
+  print(output)
 #create_matrix(3)
